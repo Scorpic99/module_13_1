@@ -7,7 +7,8 @@ async def start_strongman(name, power):
     print(f'Силач {name} начал соревнования.')
     for sphere in range(spheres):
         await asyncio.sleep(1000 / power)
-        print(f'Силач {name} поднял {sphere + 1}')
+        print(f'Силач {name} поднял {sphere + 1} шар')
+    print(f'Силач {name} закончил соревнования')
 
 async def start_tournament():
     task1 = asyncio.create_task(start_strongman('Lev', 200))
